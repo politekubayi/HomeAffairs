@@ -1,0 +1,15 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Affairs";
+    ViewBag.Heading = "Generate a valid South African ID Number";
+}
+
+<div class="row">
+    <div class="col-md-1">
+
+        <input type="button" value="Generate ID" onclick="location.href='@Url.Action("GenerateIDNumber", "IDNumber")'" />
+    </div>
+ </div>
+
+

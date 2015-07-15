@@ -1,0 +1,9 @@
+c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\bin\Debug\TestSolutions.dll
+c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\bin\Debug\TestSolutions.pdb
+c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\bin\Debug\PostSharp.dll
+c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\bin\Debug\PostSharp.xml
+c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\bin\Debug\TestSolutions.pssym
+c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.csprojResolveAssemblyReference.cache
+c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.dll.postsharp
+c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.dll
+c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.pdb
