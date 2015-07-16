@@ -72,8 +72,9 @@ namespace HomeAffairsFrontEnd.Controllers
         public ActionResult GetControlDigit()
         {
             //No need for exception handling as the erro(s) will be bubbled up from the webAPI call.
-            var idN = TempData["idNumber"];
 
+
+            var idN = TempData["idNumber"];
 
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GetControlDigitAPIHost());
@@ -86,26 +87,17 @@ namespace HomeAffairsFrontEnd.Controllers
             char[] c = { '\\', '"' };
             if (response.IsSuccessStatusCode)
             {
-                id = response.Content.ReadAsStringAsync().Result;
-                int valid = int.Parse((id.Trim(c)));
-
-                if (valid < 0)
-                {
-                    ViewBag.valid = "Invalid ID";
-                }
-                else
-                {
-                    ViewBag.valid = "Valid ID";
-                }
+                ViewBag.valid = (response.Content.ReadAsStringAsync().Result).Trim(c);
 
             }
-            else
-            {
 
-
-            }
             return View();
 
+        }
+        public ActionResult validationView()
+        {
+            return View("GenerateIDNumber");
+            //return Redirect("GenerateIDNumber");
         }
 
         public string getIDNumberAPILocation()

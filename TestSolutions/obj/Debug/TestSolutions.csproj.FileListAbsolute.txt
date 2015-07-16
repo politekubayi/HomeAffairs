@@ -7,3 +7,12 @@ c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSol
 c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.dll.postsharp
 c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.dll
 c:\users\polite.kubayi\documents\visual studio 2013\Projects\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.pdb
+C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\TestSolutions\bin\Debug\TestSolutions.dll
+C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\TestSolutions\bin\Debug\TestSolutions.pdb
+C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\TestSolutions\bin\Debug\TestSolutions.pssym
+C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\TestSolutions\bin\Debug\PostSharp.dll
+C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\TestSolutions\bin\Debug\PostSharp.xml
+C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.csprojResolveAssemblyReference.cache
+C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.dll.postsharp
+C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.dll
+C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\TestSolutions\obj\Debug\TestSolutions.pdb

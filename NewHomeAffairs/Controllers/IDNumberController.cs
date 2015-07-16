@@ -13,9 +13,7 @@ namespace MvcApplication1.Controllers
 {
     public class IDNumberController : ApiController
     {
-        IDNumber[] idNumber = new IDNumber[]{
-            new IDNumber{dateOfBirth=900502,gender=5838,countryIdentifier=0,racialIdentifier=8,checkBit=7}
-        };
+
 
         [HttpGet]
         public string getIDNumber()
@@ -39,14 +37,71 @@ namespace MvcApplication1.Controllers
                 gender = rnd.Next(1000, 10000),
                 countryIdentifier = rnd.Next(0, 2),
                 racialIdentifier = rnd.Next(8, 10),
-                checkBit = rnd.Next(1, 10)
             };
 
-            return ("" + idNumber.dateOfBirth + idNumber.gender + idNumber.countryIdentifier + idNumber.racialIdentifier + idNumber.checkBit);
+            String strIdNumber = string.Empty;
+            strIdNumber = (strIdNumber + idNumber.dateOfBirth) + idNumber.gender + idNumber.countryIdentifier + idNumber.racialIdentifier;
+            strIdNumber = strIdNumber + (GetControlDigit(strIdNumber));
+            return strIdNumber;
         }
-        
+
         [HttpGet]
-        public int GetControlDigit(string idNumber)
+        public string validateIDNumber(string id)
+        {
+            char[] idNCharArray = id.ToCharArray();
+            int oddNumber = 0;
+            Int32 intEven = 0;
+            Int64 intIdN = 0;
+            string strIdN = "";
+            string even = string.Empty;
+            for (int i = 0; i < idNCharArray.Length; i++)
+            {
+                if (((i + 1) % 2) != 0 && i != 12)
+                {
+                    oddNumber += int.Parse(idNCharArray[i] + "");
+                }
+
+            }
+
+            for (int i = 0; i < idNCharArray.Length; i++)
+            {
+                if (((i + 1) % 2) == 0)
+                {
+                    even += idNCharArray[i];
+                }
+
+            }
+
+            intEven = (Int32.Parse(even)) * 2;
+
+            char[] evenChar = (intEven.ToString()).ToCharArray();
+            intEven = 0;
+            for (int i = 0; i < evenChar.Length; i++)
+            {
+                intEven += int.Parse(evenChar[i].ToString());
+
+            }
+            intIdN = oddNumber + intEven;
+            strIdN = intIdN.ToString();
+
+            intIdN = 10 - (Int64.Parse((strIdN.ElementAt((strIdN.Length - 1)).ToString())));
+
+            if (intIdN >= 10)
+            {
+                intIdN = Int64.Parse((strIdN.ElementAt((strIdN.Length - 1)).ToString()));
+            }
+
+            if (intIdN == Int64.Parse(id.ElementAt((id.Length - 1)).ToString()))
+            {
+
+                return "ID Valid";
+            }
+
+            return "ID is not Valid";
+        }
+
+
+        private int GetControlDigit(string idNumber)
         {
             int d = -1;
 
@@ -75,7 +130,7 @@ namespace MvcApplication1.Controllers
                 d = 10 - (c % 10);
                 if (d == 10) d = 0;
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
                 string logFilePath = string.Empty;
 
@@ -84,7 +139,7 @@ namespace MvcApplication1.Controllers
                     logFilePath = ConfigurationManager.AppSettings["LogFileDirectory"];
                 }
 
-                
+
 
                 if (!File.Exists(logFilePath))
                 {
@@ -96,9 +151,9 @@ namespace MvcApplication1.Controllers
                 }
 
 
-            
-            } 
-            
+
+            }
+
             return d;
         }
 
