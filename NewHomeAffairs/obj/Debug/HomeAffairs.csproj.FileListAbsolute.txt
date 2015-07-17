@@ -59,6 +59,6 @@ C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\NewHomeAffairs\bin\System.We
 C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\NewHomeAffairs\bin\System.Web.WebPages.Deployment.xml
 C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\NewHomeAffairs\bin\System.Web.WebPages.Razor.xml
 C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\NewHomeAffairs\bin\Antlr3.Runtime.pdb
-C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\NewHomeAffairs\obj\Debug\HomeAffairs.csprojResolveAssemblyReference.cache
 C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\NewHomeAffairs\obj\Debug\NewHomeAffairs.dll
 C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\NewHomeAffairs\obj\Debug\NewHomeAffairs.pdb
+C:\Users\polite.kubayi\Documents\GitHub\HomeAffairs\NewHomeAffairs\obj\Debug\HomeAffairs.csprojResolveAssemblyReference.cache

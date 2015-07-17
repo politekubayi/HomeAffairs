@@ -235,6 +235,7 @@
     <Content Include="Views\IDNumber\GenerateIDNumber.cshtml" />
     <Content Include="Views\IDNumber\Index.cshtml" />
     <Content Include="Views\IDNumber\GetControlDigit.cshtml" />
+    <Content Include="Views\IDNumber\validateIDNumber.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

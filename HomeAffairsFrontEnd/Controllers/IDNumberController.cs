@@ -20,7 +20,6 @@ namespace HomeAffairsFrontEnd.Controllers
 
         public ActionResult Index()
         {
-
             return View();
         }
 
@@ -73,7 +72,6 @@ namespace HomeAffairsFrontEnd.Controllers
         {
             //No need for exception handling as the erro(s) will be bubbled up from the webAPI call.
 
-
             var idN = TempData["idNumber"];
 
             HttpClient client = new HttpClient();
@@ -97,9 +95,35 @@ namespace HomeAffairsFrontEnd.Controllers
         public ActionResult validationView()
         {
             return View("GenerateIDNumber");
-            //return Redirect("GenerateIDNumber");
         }
+        public ActionResult validateIDNumber()
+        {
 
+            return View();
+
+        }
+        public ActionResult ValidateExisting(string textIDNumber)
+        {
+            //No need for exception handling as the erro(s) will be bubbled up from the webAPI call.
+
+            var idN = textIDNumber;
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(GetControlDigitAPIHost());
+
+            // Add an Accept header for JSON format.
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+            HttpResponseMessage response = client.GetAsync(GetControlDigitAPILocation() + idN).Result;
+            char[] c = { '\\', '"' };
+            if (response.IsSuccessStatusCode)
+            {
+                ViewBag.valid = (response.Content.ReadAsStringAsync().Result).Trim(c);
+
+            }
+            return View("GetControlDigit");
+
+        }
         public string getIDNumberAPILocation()
         {
             string sSDirFilePath = string.Empty;
@@ -112,6 +136,7 @@ namespace HomeAffairsFrontEnd.Controllers
 
             return sSDirFilePath;
         }
+
         public string getIDNumberAPIHost()
         {
             string sSDirFilePath = string.Empty;
